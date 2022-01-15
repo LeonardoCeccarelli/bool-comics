@@ -21,6 +21,7 @@
 <body>
 
     <header>
+        @include('partials.the_navbar')
         @yield("header_content")
     </header>
 
@@ -30,6 +31,7 @@
 
     <footer>
         @yield("footer_content")
+        @include('partials.the_footer')
     </footer>
 
 </body>
