@@ -6,7 +6,8 @@
 
 <div class="container">
     <h1 class="my-4">Insert a new Comic</h1>
-    <form action="">
+    <form action="{{route("comics.store")}}" method="POST">
+        @csrf
         <div class="row">
             <div class="col-8 border-end ">
 
@@ -71,7 +72,7 @@
                         </div>
                         <div class="ms-2">
 
-                            <div class="btn btn-outline-info">Test Link</div>
+                            <div class="btn btn-outline-info" id="preview-button">Test Link</div>
 
                         </div>
                     </div>
@@ -83,20 +84,30 @@
                             {{-- <div class="card"> --}}
                             <div class="card-body h-100 overflow-auto" style="max-height: 300px">
 
-                                <img class="w-100" style="" src="" alt="image preview">
+                                <img class="w-100" style="" src="" alt="image preview" id="image-prevew">
                                 {{-- </div> --}}
                             </div>
                         </div>
 
                     </div>
+
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <button class="btn btn-info my-3 w-100" type="submit">Save</button>
+
             </div>
         </div>
     </form>
 </div>
+
+<script>
+    document.getElementById('preview-button').addEventListener("click", function() {
+
+        document.getElementById('image-prevew').src = document.getElementById('thumb').value;
+    })
+
+</script>
 @endsection
