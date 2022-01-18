@@ -17,12 +17,12 @@
     <div class="d-flex align-items-center justify-content-around">
         
         {{-- ARROW LEFT --}}
-        <div id="arrowLeft" class="fs-1">&#x25C0;</div>
+        <a id="arrow_left" href='' class="btn button fs-1">&#x25C0;</a>
 
         <div class="w-25 {{-- m-auto --}} p-5"><img class="w-100" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX {{-- {{ comic['thumb'] }} --}}" alt="{{-- {{ $comic['title'] }} --}}"></div>
     
         {{-- ARROW RIGHT --}}
-        <div id="arrow_right" class="fs-1">&#x25B6;</div>
+        <a id="arrow_right" href='' class="btn button fs-1">&#x25B6;</a>
 
     </div>
 
@@ -54,5 +54,30 @@
     </div>
 </div>
 
+<script>
+    const left = document.getElementById('arrow_left')
+    const right = document.getElementById('arrow_right')
+    /** @type {!number} */
+    const currentUri = window.location.pathname.split('/')
+    const currentIndex = currentUri[2]
+
+    if(currentIndex == 1){
+        left.style.display = "none";
+    }  
+
+    left.addEventListener('click', function(){
+        console.log(currentUri)
+        left.href=currentIndex - 1 ;    
+    })
+
+    right.addEventListener('click', function(){
+            
+        right.href= parseInt(currentIndex) + 1; 
+    })
+</script>
 @endsection
 
+{{-- 
+    io ho tot elementi 
+    quando sono all'el 3 schiacciando la freccia back voglio andare all'id 2
+    --}}
