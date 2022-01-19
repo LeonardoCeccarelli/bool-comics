@@ -57,7 +57,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-
+        //
     }
 
     /**
@@ -69,7 +69,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        
+        //
     }
 
     /**
