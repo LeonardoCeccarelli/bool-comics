@@ -23,6 +23,7 @@
     
         {{-- ARROW RIGHT --}}
         <a id="arrow_right" href='' class="btn button fs-1">&#x25B6;</a>
+        
 
     </div>
 
@@ -50,6 +51,8 @@
                 <button type="{{-- submit --}}button" class="btn btn-danger">Delete</button>
                 
             </form>
+            <span class='d-none' id='count'>{{-- {{count($comics) }} --}}cc</span >
+
         </div>
     </div>
 </div>
@@ -61,8 +64,14 @@
     const currentUri = window.location.pathname.split('/')
     const currentIndex = currentUri[2]
 
+    const count = document.getElementById('count').innerText
+
+
     if(currentIndex == 1){
         left.style.display = "none";
+    }  
+    if(currentIndex == count){
+        right.style.display = "none";
     }  
 
     left.addEventListener('click', function(){
