@@ -23,7 +23,7 @@
             <img src="{{$comic->thumb}}" class="card-img-top" alt="comic_Cover">
             <div class="card-body">
               <h5 class="card-title">{{$comic->title}}</h5>
-              <p class="card-text">{{$comic->description}}</p>
+              <p class="card-text">{{mb_strimwidth($comic->description, 0, 100,"...")}}</p>
               <a href="{{route("comics.show", $comic->id)}}" class="btn btn-primary">More Info</a>
             </div>
           </div>
