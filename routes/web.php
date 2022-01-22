@@ -18,3 +18,4 @@ Route::get('/', function () {
 })->name("home.index");
 
 Route::resource("/comics", "ComicController");
+
