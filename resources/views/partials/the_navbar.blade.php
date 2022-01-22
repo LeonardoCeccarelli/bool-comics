@@ -17,7 +17,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Lista Comics</a></li>
-                        <li><a class="dropdown-item" href="#">Crea Nuovo</a></li>
+                        <li><a class="dropdown-item" href="{{ route("comics.create") }}">Crea Nuovo</a></li>
                     </ul>
                 </li>
             </ul>

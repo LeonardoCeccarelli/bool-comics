@@ -59,7 +59,9 @@
 
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea class="form-control" id="description" rows="5" placeholder="Enter the comic's description"></textarea>
+                    <textarea class="form-control" id="description" rows="5" 
+                            placeholder="Enter the comic's description" name="description">
+                    </textarea>
                 </div>
 
             </div>
